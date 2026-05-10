@@ -3,3 +3,11 @@ services:
     image: ealen/echo-server:0.9.2
     ports:
       - 6000:80
+## Adding the docker container for python app
+  manual_trace:
+    image: manual_trace:v1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+     - 5000:5000
