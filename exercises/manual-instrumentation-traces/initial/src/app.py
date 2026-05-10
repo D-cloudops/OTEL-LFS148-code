@@ -23,7 +23,8 @@ def get_user():
 
 def do_stuff():
     time.sleep(0.1)
-    url = "http://localhost:6000/"
+   # url = "http://localhost:6000/"
+    url = "http://echo/"                     #Url to call echo service as launched with docker-compose
     response = requests.get(url)
     return response
 
