@@ -5,9 +5,11 @@ import time
 import requests
 from client import ChaosClient, FakerClient
 from flask import Flask, make_response
+from trace_utils import create_tracer
 
 # global variables
 app = Flask(__name__)
+tracer = create_tracer("app.py", "0.1")
 
 @app.route("/users", methods=["GET"])
 def get_user():
